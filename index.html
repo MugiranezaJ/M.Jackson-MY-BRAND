@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MJackson.</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    
+</head>
+<body>
+    <div class="top-bar">
+        <div class="t-logo">MJackson.</div>
+        <div class="t-navbar" id="navigation">
+            <ul class="t-n-ul">
+                <li>About</li>
+                <li>Skills</li>
+                <li>Blog</li>
+                <li>Address</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div id="dropdown" class="dropdown">
+            <!--<a href="#" class="dropdown-link" id="dropdown-link" onclick="showMenu()">Home</a>-->
+            <a  href="#about" class="dropdown-link" onclick="return showMenu();">About</a>
+            <a href="#skills" class="dropdown-link" onclick="showMenu()">Skills</a>
+            <a href="#blog" class="dropdown-link" onclick="showMenu()">Blog</a>
+            <a href="#contact" class="dropdown-link" onclick="showMenu()">Contact</a>
+            <a href="#address" class="dropdown-link" onclick="showMenu()">Address</a>
+        </div>
+        <a id="menu" class="menu" href="#" onclick="showMenu()">&#9776;</a>
+    </div>
+    <div class="container">
+        <div class="c-card">
+            <div class="img-container">
+                <img src="img/" alt="M Jackson">
+            </div>
+            <div class="description">
+                <div class="d-container">
+                    <p><b>M Jackson</b></p>
+                    <p>a profession designer and software developer.</p>
+                    <button>Hire Me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="l-container about-c" id="about">
+        <div class="l-title"><p>About</p></div>
+        <div class="about-card">
+            <div class="a-card-left">
+                <img src="images/user_1.jpg" alt="User Avatar">
+            </div>
+            <div class="a-card-right">
+                <p class="acr-word">“Who I Am”</p>
+                <p>Am a freelancer full-stack developer who is passionate about making cool design and flexible systems for everyone.</p>
+                <p>I like Graphics world  as i also like to play with Graphics software as a hobby.</p>
+            </div>
+        </div>
+    </div>
+    <div class="l-container skills-c" id="skills">
+        <div class="l-title"><p>My Skills</p></div>
+        <div class="skills-card">
+            <div class="software-skills">
+                <p class="skills-titles">Software Development</p>
+                <div class="i-container">
+                    <div class="s-s-item skills-item">
+                        <div class="s-s-image"><img src="images/skills/html-tutorial.png" alt=""></div>
+                        <di class="s-s-name">HTML</di>
+                    </div>
+                    <div class="s-s-item skills-item">
+                        <div class="s-s-image"><img src="images/skills/css3.jpg" alt=""></div>
+                        <di class="s-s-name">CSS</di>
+                    </div>
+                    <div class="s-s-item skills-item">
+                        <div class="s-s-image"><img src="images/skills/javascripthome.png" alt=""></div>
+                        <di class="s-s-name">JavaScript</di>
+                    </div>
+                    <div class="s-s-item skills-item">
+                        <div class="s-s-image"><img src="images/skills/mysql.png" alt=""></div>
+                        <di class="s-s-name">MySql</di>
+                    </div>
+                    <div class="s-s-item skills-item">
+                        <div class="s-s-image"><img src="images/skills/pythonhome.png" alt=""></div>
+                        <di class="s-s-name">PYTHON</di>
+                    </div>
+                    <div class="s-s-item skills-item">
+                        <div class="s-s-image"><img src="images/skills/javahome.png" alt=""></div>
+                        <di class="s-s-name">JAVA</di>
+                    </div>
+                    <div class="s-s-item skills-item">
+                        <div class="s-s-image"><img src="images/skills/nodejs-logo.png" alt=""></div>
+                        <di class="s-s-name">NodeJS</di>
+                    </div>
+                    <div class="s-s-item skills-item">
+                        <div class="s-s-image"><img src="images/skills/mongodb.png" alt=""></div>
+                        <di class="s-s-name">MongoDB</di>
+                    </div>
+                </div>
+            </div>
+            <div class="graphics-skills">
+                <p class="skills-titles">Graphics Design</p>
+                <div class="s-skill-set">
+                    <div class="s-g-item skills-item">
+                        <div class="s-g-image"><img src="images/skills/adobe after effect.jpg" alt=""></div>
+                        <di class="s-g-name">After Effect</di>
+                    </div>
+                    <div class="s-g-item skills-item">
+                        <div class="s-g-image"><img src="images/skills/photoshop.png" alt=""></div>
+                        <di class="s-g-name">Photoshop</di>
+                    </div>
+                    <div class="s-g-item skills-item">
+                        <div class="s-g-image"><img src="images/skills/illustrator.png" alt=""></div>
+                        <di class="s-g-name">Illustartor</di>
+                    </div>
+                    <div class="s-g-item skills-item">
+                        <div class="s-g-image"><img src="images/skills/unity3d.jpg" alt=""></div>
+                        <di class="s-g-name">Unity</di>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="l-container projects-c" id="projects">
+        <div class="l-title"><p>My Projects</p></div>
+        <div class="projects-card">
+            <div class="p-item">
+                <div class="p-i-upper">
+                    <img src="images/projects/cart.png" alt="shopping cart">
+                </div>
+                <div class="p-i-lower">
+                    <p class="p-i-l-title"><b >mycity.rw</b></p>
+                    <p>The best  online shopping portal in musanze touristic district.</p>
+                    <ul>
+                        <li>Role: Back-End Developer</li>
+                        <li>Type: E-commerce</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="p-item">
+                <div class="p-i-upper">
+                    <div class="p-i-thumbnail">MJackson.</div>
+                </div>
+                <div class="p-i-lower">
+                    <p class="p-i-l-title"><b >mycity.rw</b></p>
+                    <p>The portfolio about me. Is the website that shows who i am and what i can do</p>
+                    <ul>
+                        <li>Role: Full-stack Developer</li>
+                        <li>Type: Portfolio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="button-1 hire-button">Hire Me</button>
+    </div>
+    <div class="l-container blog-c" id="blog">
+        <div class="l-title"><p>My Blog</p></div>
+        <div class="blog-card">
+            <div class="b-card-item">
+                <div class="b-thumbnail">
+                    <div class="b-date">6 Aug 2020</div>
+                    <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                </div>
+                <div class="b-description">
+                    <p class="b-title">Tricky Thing To Do With Python</p>
+                    <p>So what are the most fun things you've used Python for that can be turned into a ... Try to reduce the code as much as possible so that you are left with minimal</p>
+                    <a href="#">More...</a>
+                </div>
+            </div>
+            <div class="b-card-item">
+                    <div class="b-thumbnail">
+                        <div class="b-date">6 Aug 2020</div>
+                        <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                    </div>
+                    <div class="b-description">
+                        <p class="b-title">Tricky Thing To Do With Python</p>
+                        <p>So what are the most fun things you've used Python for that can be turned into a ... Try to reduce the code as much as possible so that you are left with minimal</p>
+                        <a href="#">More...</a>
+                    </div>
+            </div>
+            <div class="b-card-item">
+                    <div class="b-thumbnail">
+                        <div class="b-date">6 Aug 2020</div>
+                        <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                    </div>
+                    <div class="b-description">
+                        <p class="b-title">Tricky Thing To Do With Python</p>
+                        <p>So what are the most fun things you've used Python for that can be turned into a ... Try to reduce the code as much as possible so that you are left with minimal</p>
+                        <a href="#">More...</a>
+                    </div>
+            </div>
+            <div class="b-card-item">
+                    <div class="b-thumbnail">
+                        <div class="b-date">6 Aug 2020</div>
+                        <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                    </div>
+                    <div class="b-description">
+                        <p class="b-title">Tricky Thing To Do With Python</p>
+                        <p>So what are the most fun things you've used Python for that can be turned into a ... Try to reduce the code as much as possible so that you are left with minimal</p>
+                        <a href="#">More...</a>
+                    </div>
+            </div>
+        </div>
+        <button class="button-1 b-more-button">More Posts...</button>
+    </div>
+    <div class="newslatter-container">
+        <div class="l-title n-t-border"><p class="newslatter-t">Newslatter</p></div>
+        <div class="n-form-container">
+            <p>Subscribe to our newslatter for late news</p>
+            <form method="POST" action="#">
+                <input type="text" name="newslatter" class="n-input" placeholder="Your email"><button class="n-button">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <div class="l-container contact-c" id="contact">
+        <div class="l-title contact-t"><p>Contact</p></div>
+        <div class="contact-card">
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" name="name" class="c-form-input" placeholder="Your Name">
+                    <input type="text" name="email" class="c-form-input" placeholder="Your Email">
+                    <textarea class="c-form-input" placeholder="Your Message"></textarea>
+                    <input type="submit" name="submit" value="Send" class="c-form-input c-button">
+                </form>
+            </div>
+            <div class="c-socialmedia">
+                <div class="c-m-container">
+                    <a href="#"><img src="images/social/Facebook.png" alt="facebook" class="c-social"></a>
+                    <a href="#"><img src="images/social/1_Twitter2_colored_svg-512.png" alt="twitter" class="c-social"></a>
+                    <a href="#"><img src="images/social/in1.2.png" alt="lindedin" class="c-social"></a>
+                    <p>Feel Free To Reach Out To Me Though Social Media</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="address-container" id="address">
+        <div class="address-cap">
+            <P>ADDRESS.</P>
+        </div>
+        
+        <div class="address">
+            <img src="images/loca.png" alt="Location icon">
+            <p>kk712 GiKondo, Kigali, Rwanda</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy;2020 mjackson.com</p>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>
