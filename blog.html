@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <title>MJackson - blog</title>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="t-logo">MJackson.</div>
+        <div class="t-navbar" id="navigation">
+            <ul class="t-n-ul">
+                <li><a  href="index.html#">Home</a></li>
+                <li><a  href="index.html#about">About</a></li>
+                <li><a  href="index.html#skills">Skills</a></li>
+                <li><a  href="blog.html">Blog</a></li>
+                <li><a  href="index.html#address">Address</a></li>
+                <li><a  href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div id="dropdown" class="dropdown">
+            <!--<a href="#" class="dropdown-link" id="dropdown-link" onclick="showMenu()">Home</a>-->
+            <a  href="index.html#" class="dropdown-link" onclick="return showMenu();">Home</a>
+            <a  href="index.html#about" class="dropdown-link" onclick="return showMenu();">About</a>
+            <a href="index.html#skills" class="dropdown-link" onclick="showMenu()">Skills</a>
+            <a href="blog.html" class="dropdown-link" onclick="showMenu()">Blog</a>
+            <a href="index.html#contact" class="dropdown-link" onclick="showMenu()">Contact</a>
+            <a href="index.html#address" class="dropdown-link" onclick="showMenu()">Address</a>
+        </div>
+        <a id="menu" class="menu" href="#" onclick="showMenu()">&#9776;</a>
+    </div>
+    <div class="blog-c" id="blog">
+        <div class="l-title"><p>My Blog</p></div>
+        <div class="blog-card">
+            <div class="b-card-item">
+                <div class="b-thumbnail">
+                    <div class="b-date">6 Aug 2020</div>
+                    <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                </div>
+                <div class="b-description">
+                    <p class="b-title">Tricky Thing To Do With Python</p>
+                    <p>So what are the most fun things you've used Python for that can be turned into a ... Try to reduce the code as much as possible so that you are left with minimal</p>
+                    <a href="article.html">More...</a>
+                </div>
+            </div>
+            <div class="b-card-item">
+                    <div class="b-thumbnail">
+                        <div class="b-date">6 Aug 2020</div>
+                        <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                    </div>
+                    <div class="b-description">
+                        <p class="b-title">Tricky Thing To Do With Python</p>
+                        <p>So what are the most fun things you've used Python for that can be turned into a ... Try to reduce the code as much as possible so that you are left with minimal</p>
+                        <a href="article.html">More...</a>
+                    </div>
+            </div>
+            <div class="b-card-item">
+                    <div class="b-thumbnail">
+                        <div class="b-date">6 Aug 2020</div>
+                        <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                    </div>
+                    <div class="b-description">
+                        <p class="b-title">Tricky Thing To Do With Python</p>
+                        <p>So what are the most fun things you've used Python for that can be turned into a ... Try to reduce the code as much as possible so that you are left with minimal</p>
+                        <a href="article.html">More...</a>
+                    </div>
+            </div>
+            <div class="b-card-item">
+                    <div class="b-thumbnail">
+                        <div class="b-date">6 Aug 2020</div>
+                        <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                    </div>
+                    <div class="b-description">
+                        <p class="b-title">Tricky Thing To Do With Python</p>
+                        <p>So what are the most fun things you've used Python for that can be turned into a ... Try to reduce the code as much as possible so that you are left with minimal</p>
+                        <a href="article.html">More...</a>
+                    </div>
+            </div>
+        </div>
+        <!--<button class="button-1 b-more-button">More Posts...</button>-->
+    </div>
+    <div class="address-container" id="address">
+        <div class="address-cap">
+            <P>ADDRESS.</P>
+        </div>
+        
+        <div class="address">
+            <img src="images/loca.png" alt="Location icon">
+            <p>kk712 GiKondo, Kigali, Rwanda</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy;2020 mjackson.com</p>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>

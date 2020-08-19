@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MJackson.</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
@@ -13,27 +14,29 @@
         <div class="t-logo">MJackson.</div>
         <div class="t-navbar" id="navigation">
             <ul class="t-n-ul">
-                <li>About</li>
-                <li>Skills</li>
-                <li>Blog</li>
-                <li>Address</li>
-                <li>Contact</li>
+                <li><a  href="index.html#">Home</a></li>
+                <li><a  href="index.html#about">About</a></li>
+                <li><a  href="index.html#skills">Skills</a></li>
+                <li><a  href="blog.html">Blog</a></li>
+                <li><a  href="index.html#address">Address</a></li>
+                <li><a  href="index.html#contact">Contact</a></li>
             </ul>
         </div>
         <div id="dropdown" class="dropdown">
             <!--<a href="#" class="dropdown-link" id="dropdown-link" onclick="showMenu()">Home</a>-->
-            <a  href="#about" class="dropdown-link" onclick="return showMenu();">About</a>
-            <a href="#skills" class="dropdown-link" onclick="showMenu()">Skills</a>
-            <a href="#blog" class="dropdown-link" onclick="showMenu()">Blog</a>
-            <a href="#contact" class="dropdown-link" onclick="showMenu()">Contact</a>
-            <a href="#address" class="dropdown-link" onclick="showMenu()">Address</a>
+            <a  href="index.html#" class="dropdown-link" onclick="return showMenu();">Home</a>
+            <a  href="index.html#about" class="dropdown-link" onclick="return showMenu();">About</a>
+            <a href="index.html#skills" class="dropdown-link" onclick="showMenu()">Skills</a>
+            <a href="blog.html" class="dropdown-link" onclick="showMenu()">Blog</a>
+            <a href="index.html#contact" class="dropdown-link" onclick="showMenu()">Contact</a>
+            <a href="index.html#address" class="dropdown-link" onclick="showMenu()">Address</a>
         </div>
         <a id="menu" class="menu" href="#" onclick="showMenu()">&#9776;</a>
     </div>
     <div class="container">
         <div class="c-card">
             <div class="img-container">
-                <img src="img/" alt="M Jackson">
+                <img src="images/IMG_20181229_160344s.jpg" alt="M Jackson">
             </div>
             <div class="description">
                 <div class="d-container">
@@ -128,7 +131,7 @@
                     <img src="images/projects/cart.png" alt="shopping cart">
                 </div>
                 <div class="p-i-lower">
-                    <p class="p-i-l-title"><b >mycity.rw</b></p>
+                    <p class="p-i-l-title"><h2>mycity.rw</h2></p>
                     <p>The best  online shopping portal in musanze touristic district.</p>
                     <ul>
                         <li>Role: Back-End Developer</li>
@@ -141,7 +144,7 @@
                     <div class="p-i-thumbnail">MJackson.</div>
                 </div>
                 <div class="p-i-lower">
-                    <p class="p-i-l-title"><b >mycity.rw</b></p>
+                    <p class="p-i-l-title"><h2>mjackson.com</h2></p>
                     <p>The portfolio about me. Is the website that shows who i am and what i can do</p>
                     <ul>
                         <li>Role: Full-stack Developer</li>
@@ -152,6 +155,7 @@
         </div>
         <button class="button-1 hire-button">Hire Me</button>
     </div>
+    <!--
     <div class="l-container blog-c" id="blog">
         <div class="l-title"><p>My Blog</p></div>
         <div class="blog-card">
@@ -202,6 +206,7 @@
         </div>
         <button class="button-1 b-more-button">More Posts...</button>
     </div>
+-->
     <div class="newslatter-container">
         <div class="l-title n-t-border"><p class="newslatter-t">Newslatter</p></div>
         <div class="n-form-container">
