@@ -61,9 +61,13 @@ body{
 }
 
 .closebtn{
+    display: none;
+    background-color: transparent;
+    border-style: none;
+    color: #fff;
     margin: 0;
     padding: 0 !important;
-    font-size: 50px !important;
+    font-size: 30px !important;
     float: right;
 }
 .sidenav>h2{
@@ -158,6 +162,9 @@ body{
 }
 
 @media only screen and (max-width: 824px){
+    .closebtn{
+        display: block;
+    }
     #sidenav{
         width: 0;
         font-size: 12px;
@@ -200,8 +207,6 @@ body{
 }
 
 @media only screen and (max-width: 600px){
-    .container{
-    }
     .item{
         width: 140px;
     }
