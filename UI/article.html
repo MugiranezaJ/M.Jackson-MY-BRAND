@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/article.css" />
+    <title>Mjackson - article title</title>
+</head>
+<body>
+        <div class="top-bar">
+                <div class="t-logo">MJackson.</div>
+                <div class="t-navbar" id="navigation">
+                    <ul class="t-n-ul">
+                        <li><a  href="../index.html#">Home</a></li>
+                        <li><a  href="../index.html#about">About</a></li>
+                        <li><a  href="../index.html#skills">Skills</a></li>
+                        <li><a  href="blog.html">Blog</a></li>
+                        <li><a  href="../index.html#address">Address</a></li>
+                        <li><a  href="../index.html#contact">Contact</a></li>
+                        <li><a  href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div id="dropdown" class="dropdown">
+                    <!--<a href="#" class="dropdown-link" id="dropdown-link" onclick="showMenu()">Home</a>-->
+                    <a  href="../index.html#" class="dropdown-link" onclick="return showMenu();">Home</a>
+                    <a  href="../index.html#about" class="dropdown-link" onclick="return showMenu();">About</a>
+                    <a href="../index.html#skills" class="dropdown-link" onclick="showMenu()">Skills</a>
+                    <a href="blog.html" class="dropdown-link" onclick="showMenu()">Blog</a>
+                    <a href="../index.html#contact" class="dropdown-link" onclick="showMenu()">Contact</a>
+                    <a href="../index.html#address" class="dropdown-link" onclick="showMenu()">Address</a>
+                    <a  href="login.html" class="dropdown-link" onclick="showMenu()">Login</a>
+                </div>
+                <a id="menu" class="menu" href="#" onclick="showMenu()">&#9776;</a>
+            </div>
+    <div class="b-a-container">
+        <div class="article-container">
+            <div class="article-head">
+                <div class="b-a-titles">
+                    <h1>Tricky Thing To Do With Python</h1>
+                    <div class="title-meta">
+                        <div class="date">
+                            Posted: 19.08.2020 16:32
+                        </div>
+                        <div class="share">
+                            <a href="#"><img src="images/social/1_Twitter2_colored_svg-512.png" alt="twitter"></a> 
+                            <a href="#"><img src="images/social/Facebook.png" alt="facebook"></a>
+                            <a href="#"><img src="images/social/1_Twitter2_colored_svg-512.png" alt="instagram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-body">
+                <div class="article-ft-image">
+                    <img src="images/blog/1800830_8d5c_2.jpg" alt="python programming language">
+                    <p>photo cortesy:</p>
+                </div>
+                <div class="article-description">
+                        <p>With increase in popularity of python, more and more features are becoming available for python coding. Using this features makes writing the code in fewer lines and cleaner. In this article we will see 10 such python tricks which are very frequently used and most useful.</p>
+                        <h2>Reversing a List</h2>
+                        
+                        <p>We can simply reverse a given list by using a reverse() function. It handles both numeric and string data types present in the list.</p>
+                        <p>Example</p>
+                        <p></p>
+                        <p>List = ["Shriya", "Lavina","Sampreeti" ]</p>
+                        <p>List.reverse()</p>
+                        <p>print(List)</p>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <code>['Sampreeti', 'Lavina', 'Shriya']</code>
+                        
+                        <p></p>Print list elements in any order
+                        
+                        <p>If you need to print the values of a list in different orders, you can assign the list to a series of variables and programmatically decide the order in which you want to print the list.</p>
+                        <p>Example</p>
+                        
+                        <p><code>List = [1,2,3]</code></p>
+                        <p><code>w, v, t = List</code></p>
+                        <p><code>print(v, w, t )</code></p>
+                        <p><code>print(t, v, w )</code></p>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <code>(2, 1, 3)</code>
+                        <code>(3, 2, 1)</code>
+                        
+                        <h2>Using Generators Inside Functions</h2>
+                        
+                        <p>We can use generators directly inside a function to writer shorter and cleaner code. In the below example we find the sum using a generator directly as an argument to the sum function.
+                        Example</p>
+                        
+                        <code>sum(i for i in range(10) )</code>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <code>45</code>
+                        
+                        <p>Using the zip() function</p>
+                        
+                        <p>When we need to join many iterator objects like lists to get a single list we can use the zip function. The result shows each item to be grouped with their respective items from the other lists.
+                        Example</p>
+                        
+                        <code>Year = (1999, 2003, 2011, 2017)</code>
+                        <code>Month = ("Mar", "Jun", "Jan", "Dec")</code>
+                        <code>Day = (11,21,13,5)</code>
+                        <code>print zip(Year,Month,Day)</code>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <code>[(1999, 'Mar', 11), (2003, 'Jun', 21), (2011, 'Jan', 13), (2017, 'Dec', 5)]</code>
+                        
+                        <p>Swap two numbers using a single line of code</p>
+                        
+                        <p>Swapping of numbers usually requires storing of values in temporary variables. But with this python trick we can do that using one line of code and without using any temporary variables.
+                        Example</p>
+                        
+                        <code>x,y = 11, 34</code>
+                        <code>print x</code>
+                        <code>print y</code>
+                        <code>x,y = y,x</code>
+                        <code>print x</code>
+                        <code>print y</code>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <code>11</code>
+                        <code>34</code>
+                        <code>34</code>
+                        <code>11</code>
+                        
+                        <h2>Transpose a Matrix</h2>
+                        
+                        <p>Transposing a matrix involves converting columns into rows. In python we can achieve it by designing some loop structure to iterate through the elements in the matrix and change their places or we can use the following script involving zip function in conjunction with the * operator to unzip a list which becomes a transpose of the given matrix.
+                        Example</p>
+                        
+                        <code>x = [[31,17],</code>
+                        <code>[40 ,51],</code>
+                        <code> [13 ,12]]</code>
+                        <code>print (zip(*x))</code>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <code>[(31, 40, 13), (17, 51, 12)]</code>
+                        
+                        <h2>Print a string N Times</h2>
+                        
+                        <p>The usual approach in any programming language to print a string multiple times is to design a loop. But python has a simple trick involving a string and a number inside the print function.
+                        Example</p>
+                        
+                        <code>str ="Point";</code>
+                        <code>print(str * 3);</code>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <p>PointPointPoint</p>
+                        
+                        <h2>Reversing List Elements Using List Slicing</h2>
+                        
+                        <p>List slicing is a very powerful technique in python which can also be used to reverse the order of elements in a list.</p>
+                        <p>Example</p>
+                        
+                        <code>#Reversing Strings</code>
+                        <code>list1 = ["a","b","c","d"]</code>
+                        <code>print list1[::-1]</code>
+                        
+                        <code># Reversing Numbers</code>
+                        <code>list2 = [1,3,6,4,2]</code>
+                        <code>print list2[::-1]</code>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <code>['d', 'c', 'b', 'a']</code>
+                        <code>[2, 4, 6, 3, 1]</code>
+                        
+                        <h2>Find the Factors of a Number</h2>
+                        
+                        <p>When we are need of the factors of a number, required for some calculation or analysis, we can design a small loop which will check the divisibility of that number with the iteration index.</p>
+                        <p>Example</p>
+                        
+                        <code>f = 32</code>
+                        <code>print "The factors of",x,"are:"</code>
+                        <code>for i in range(1, f + 1):</code>
+                        <code>   if f % i == 0:</code>
+                        <code>print(i)</code>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <p>The factors of 32 are:</p>
+                        <code>1</code>
+                        <code>2</code>
+                        <code>4</code>
+                        <code>8</code>
+                        <code>16</code>
+                        <code>32</code>
+                        
+                        <h2>hecking the Usage of Memory</h2>
+                        
+                        <p>We can check the amount of memory consumed by each variable that we declare by using the getsizeof() function. As you can see below, different string lengths will consume different amount of memory.</p>
+                        <p>Example</p>
+                        
+                        <code>import sys</code>
+                        <code>a, b, c,d = "abcde" ,"xy", 2, 15.06</code>
+                        <code>print(sys.getsizeof(a))</code>
+                        <code>print(sys.getsizeof(b))</code>
+                        <code>print(sys.getsizeof(c))</code>
+                        <code>print(sys.getsizeof(d))</code>
+                        
+                        <p>Output</p>
+                        
+                        <p>Running the above code gives us the following result −</p>
+                        
+                        <code>38</code>
+                        <code>35</code>
+                        <code>24</code>
+                        <code>24</code>
+                </div>
+            </div>
+        </div>
+        <div class="right-box">
+            
+            <div class="suggestion-box">
+                <p class="l-title">Suggested Post</p>
+                <a href="#">
+                    <div class="sugg-item">
+                        <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                        <hr>
+                        <p>Tricky Thing To Do With Python</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="sugg-item">
+                        <img src="images/blog/1800830_8d5c_2.jpg" alt="python">
+                        <hr>
+                        <p>Tricky Thing To Do With Python</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="comments-container">
+        <p><h3>Comments</h3></p>
+        <div class="user-comment">
+            <div class="user-icon"><img src="images/user_1.jpg" alt="user"></div>
+            <div class="comment">
+                <p><b>Jackson</b></p>
+                <p class="user-comment-date">10 Aug 2020 09:45</p>
+                <p>This was helpful. i appreciate it. Please keep providing other tips like this</p>
+            </div>
+        </div>
+        <div class="user-comment">
+                <div class="user-icon"><img src="images/user_1.jpg" alt="user"></div>
+                <div class="comment">
+                    <p><b>Jackson</b></p>
+                    <p class="user-comment-date">10 Aug 2020 09:45</p>
+                    <p>This was helpful. i appreciate it. Please keep providing other tips like this</p>
+                </div>
+        </div>
+    </div>
+    <divc class="comment-form-container">
+        <div class="comment-form">
+            <form action="#" method="POST">
+                <p>Your Comment Here</p>
+                <input type="text" name="name" placeholder="Your Name" class="comment-input">
+                <input type="email" name="email" placeholder="Your Email" class="comment-input">
+                <textarea class="comment-input" placeholder="Your message"></textarea>
+                <input type="submit" name="submit" value="Comment" class="comment-input comment-button">
+            </form>
+            
+        </div>
+    </divc>
+    <div class="address-container" id="address">
+            <div class="address-cap">
+                <P>ADDRESS.</P>
+            </div>
+            
+            <div class="address">
+                <img src="images/loca.png" alt="Location icon">
+                <p>kk712 GiKondo, Kigali, Rwanda</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy;2020 mjackson.com</p>
+        </div>
+</body>
+</html>
+<script src="js/main.js"></script>
