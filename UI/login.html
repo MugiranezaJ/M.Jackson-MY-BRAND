@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" media="screen" href="css/admin_login.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
     <script src="js/admin_index.js"></script>
 </head>
 <body>
@@ -22,7 +25,7 @@
         <div class="inner-container">
             <div class="login-form">
                 <p class="border-bottom">Log In</p>
-                <form action="admin/index.html" method="POST">
+                <form method="POST" class="login">
                     <p>Email</p>
                     <input type="text" name="email" placeholder="Email" class="login-iput">
                     <p>Password</p>
@@ -37,5 +40,23 @@
             </div>
         </div>
     </div>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyArQ4Y-CvsXYyKoA4FWkyvHmjtqrwWX-Es",
+            authDomain: "mjackson-my-brand.firebaseapp.com",
+            databaseURL: "https://mjackson-my-brand.firebaseio.com",
+            projectId: "mjackson-my-brand",
+            storageBucket: "mjackson-my-brand.appspot.com",
+            messagingSenderId: "776224693679",
+            appId: "1:776224693679:web:78c67e2e5f025cafc3e35a"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({timestampsInSnapshots: true});
+    </script>
+    <script src="js/login.js"></script>
 </body>
 </html>

@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link rel="stylesheet" href="../css/admin_index.css">
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-storage.js"></script>
     <title>Dashbord</title>
 </head>
 <body>
@@ -24,6 +28,8 @@
         <a href="manage_posts.html">Manage Posts</a>
         <a href="add_project.html">Projects</a>
         <a href="manage_projects.html">Manage Projects</a>
+        <a href="add_skills.html">Skills</a>
+        <a href="manage_skills.html">Manage Skills</a>
         <a href="comments.html">Comments</a>
         <a href="newslatter.html">Newslatter</a>
         <a href="contact.html">Contact</a>
@@ -56,5 +62,23 @@
             </div>
         </div>
 </body>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyArQ4Y-CvsXYyKoA4FWkyvHmjtqrwWX-Es",
+        authDomain: "mjackson-my-brand.firebaseapp.com",
+        databaseURL: "https://mjackson-my-brand.firebaseio.com",
+        projectId: "mjackson-my-brand",
+        storageBucket: "mjackson-my-brand.appspot.com",
+        messagingSenderId: "776224693679",
+        appId: "1:776224693679:web:78c67e2e5f025cafc3e35a"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    db.settings({timestampsInSnapshots: true});
+</script>
+<script src="../js/logout.js"></script>
 </html>
 <script src="../js/admin_index.js"></script>
