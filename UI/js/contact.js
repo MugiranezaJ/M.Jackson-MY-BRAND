@@ -1,6 +1,7 @@
 const contactForm = document.querySelector('.contact');
 const newslatter = document.querySelector('.newslatter-form');
 
+// Contact form section
 contactForm.addEventListener('submit', (e) =>{
     e.preventDefault();
 
@@ -20,6 +21,7 @@ contactForm.addEventListener('submit', (e) =>{
     window.alert('Sent Successfully');
 })
 
+// Newslatter section
 newslatter.addEventListener('submit', (e) =>{
     e.preventDefault();
 
