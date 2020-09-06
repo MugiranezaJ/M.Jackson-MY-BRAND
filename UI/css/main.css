@@ -107,7 +107,7 @@ p{
     width: 50%;
     height: 100%;
     float: left;
-    background-color: tomato;
+    /*background-color: tomato;*/
 }
 .img-container> img{
     height: 100%;

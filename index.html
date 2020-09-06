@@ -8,6 +8,7 @@
     <title>MJackson.</title>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" media="screen" href="UI/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="UI/css/pop_up.css" />
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
     
@@ -41,13 +42,14 @@
     <div class="container">
         <div class="c-card">
             <div class="img-container">
-                <img src="UI/images/IMG_20181229_160344s.jpg" alt="M Jackson">
+                <!--<img class="pro-image" src="UI/images/IMG_20181229_160344s.jpg" alt="M Jackson">-->
+                <img class="pro-image" src="" alt="M Jackson">
             </div>
             <div class="description">
                 <div class="d-container">
-                    <p><b>M Jackson</b></p>
-                    <p>a profession designer and software developer.</p>
-                    <button>Hire Me</button>
+                    <p><b class="pro-name">M Jackson</b></p>
+                    <p class="pro-caption"><!--a profession designer and software developer.--></p>
+                    <button id="myBtn" class="myBtn">Hire Me</button>
                 </div>
             </div>
         </div>
@@ -60,8 +62,8 @@
             </div>
             <div class="a-card-right">
                 <p class="acr-word">“Who I Am”</p>
-                <p>Am a freelancer full-stack developer who is passionate about making cool design and flexible systems for everyone.</p>
-                <p>I like Graphics world  as i also like to play with Graphics software as a hobby.</p>
+                <p class="pro-about"> <!--Am a freelancer full-stack developer who is passionate about making cool design and flexible systems for everyone.--></p>
+                <!--<p>I like Graphics world  as i also like to play with Graphics software as a hobby.</p>-->
             </div>
         </div>
     </div>
@@ -158,7 +160,7 @@
                 </div>
             </div>-->
         </div>
-        <button class="button-1 hire-button">Hire Me</button>
+        <button class="button-1 hire-button myBtn" id="myBtn" >Hire Me</button>
     </div>
     
     <div class="newslatter-container">
@@ -205,25 +207,26 @@
     <div class="footer">
         <p>&copy;2020 mjackson.com</p>
     </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Hire Me</p>
+          <form action="mailto:jackswalter7@gmail.com" method="get" enctype="text/plain">
+              <input type="email" name="email" class="hire-input" placeholder="Your Email">
+              <textarea name="body"cols="30" rows="10" placeholder="Your Mesaage"></textarea>
+              <input type="submit" value="Request" class="hire-input requestBtn">
+          </form>
+        </div>
+      
+      </div>
 </body>
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyArQ4Y-CvsXYyKoA4FWkyvHmjtqrwWX-Es",
-        authDomain: "mjackson-my-brand.firebaseapp.com",
-        databaseURL: "https://mjackson-my-brand.firebaseio.com",
-        projectId: "mjackson-my-brand",
-        storageBucket: "mjackson-my-brand.appspot.com",
-        messagingSenderId: "776224693679",
-        appId: "1:776224693679:web:78c67e2e5f025cafc3e35a"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-    db.settings({timestampsInSnapshots: true});
-</script>
+<script src="UI/js/userAreaConfig.js"></script>
+<script src="UI/js/profile.js"></script>
 <script src="UI/js/contact.js"></script>
 <script src="UI/js/landing_skills.js"></script>
 <script src="UI/js/landing_projects.js"></script>
+<script src="UI/js/pop_up.js"></script>
 </html>
 <script src="UI/js/main.js"></script>

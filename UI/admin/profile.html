@@ -22,7 +22,7 @@
         </div>
         <h2>Navigation:</h2>
         <a href="index.html">Dashbord</a>
-        <a href="profile.html" class="selected">Profile</a>
+        <a href="profile.html?id=F7DPtgI9y4hE1gUTysRB" class="selected">Profile</a>
         <a href="change_password.html">Change Password</a>
         <a href="post.html">Post</a>
         <a href="manage_posts.html">Manage Posts</a>
@@ -43,13 +43,15 @@
                 <div class="top-title">Profile</div>
             </div>
             <div class="post-container">
-                <form action="#" method="POST">
+                <form action="#" method="POST" class="profile-form">
                     <p>Your Name</p>
-                    <input type="text" name="title" placeholder="Enter Title" class="post-input">
+                    <input type="text" name="name" placeholder="Enter Title" class="post-input">
                     <p>Your Image</p>
-                    <input type="file" name=ft-"images" class="post-input">
+                    <input type="file" name="ft_image" class="post-input ft_image">
                     <p>Caption</p>
-                    <textarea class="post-input"></textarea>
+                    <input type="text" name="caption" placeholder="Enter Caption" class="post-input">
+                    <p>About</p>
+                    <textarea class="post-input" name="about"></textarea>
                     <input type="submit" name="post" value="Save & Post" class="post-button">
                 </form>
             </div>
@@ -57,5 +59,6 @@
 </body>
 <script src="../js/config.js"></script>
 <script src="../js/logout.js"></script>
+<script src="../js/manage_profile.js"></script>
 </html>
 <script src="../js/admin_index.js"></script>
