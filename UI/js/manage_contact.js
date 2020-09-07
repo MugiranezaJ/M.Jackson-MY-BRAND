@@ -2,7 +2,7 @@ const container = document.querySelector('.contact-container');
 var count = 0;
 
 
-function renderPosts(doc, count){
+function renderContacts(doc, count){
     const name = document.createElement('p');
     const email = document.createElement('p');
     const message = document.createElement('p');
@@ -31,10 +31,9 @@ function renderPosts(doc, count){
     return deleteIcon;
 }
 db.collection('contacts').orderBy('ContactDate').get().then((snapshot) => {
-    console.log(snapshot.size)
     snapshot.docs.forEach(doc => {
         count += 1;
-        deleteIcon =  renderPosts(doc, count);
+        deleteIcon =  renderContacts(doc, count);
         deleteIcon.addEventListener('click', (e) =>{
             Did = doc.id;
             email = doc.data().email;

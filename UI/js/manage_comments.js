@@ -33,25 +33,6 @@ function renderPosts(postDoc, doc, count){
 
     return deleteIcon;
 }
-/*db.collection('contacts').orderBy('ContactDate').get().then((snapshot) => {
-    console.log(snapshot.size)
-    snapshot.docs.forEach(doc => {
-        count += 1;
-        deleteIcon =  renderPosts(doc, count);
-        deleteIcon.addEventListener('click', (e) =>{
-            Did = doc.id;
-            email = doc.data().email;
-            if(confirm('Delete ' + email + '?')){
-                e.preventDefault();
-                db.collection('contacts').doc(Did).delete();
-            }
-            
-        });
-    });
-})
-*/
-
-
 
 db.collection('blogs').get().then((snapshot) =>{
     snapshot.docs.forEach(postDoc => {
@@ -59,7 +40,6 @@ db.collection('blogs').get().then((snapshot) =>{
         var id = postDoc.id
         db.collection('blogs').doc(id).collection('comments').get().then((snapshot) =>{
             snapshot.docs.forEach(doc => {
-                //console.log(id + ':' + doc.data().comment)
                 count += 1;
                 deleteIcon =  renderPosts(postDoc, doc, count);
                 deleteIcon.addEventListener('click', (e) =>{
@@ -67,11 +47,10 @@ db.collection('blogs').get().then((snapshot) =>{
                     email = doc.data().email;
                     if(confirm('Delete ' + email + '?')){
                         e.preventDefault();
-                        db.collection('comments').doc(Did).delete();
+                        db.collection('blogs').doc(id).collection('comments').doc(Did).delete();
                     }
                 })
             });
         })
-        //console.log(doc.data().comment)
     });
 })

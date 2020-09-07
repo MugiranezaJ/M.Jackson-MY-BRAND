@@ -14,11 +14,6 @@ db.collection('newslatter').get().then((snapshot) =>{
     newsletter.textContent = size;
 })
 
-/*db.collection('comments').get().then((snapshot) =>{
-    var size = snapshot.size;
-    comments.textContent = size;
-})*/
-
 db.collection('contacts').get().then((snapshot) =>{
     var size = snapshot.size;
     contacts.textContent = size;
@@ -30,12 +25,9 @@ db.collection('blogs').get().then((snapshot) =>{
         var id = postDoc.id
         db.collection('blogs').doc(id).collection('comments').get().then((snapshot) =>{
             snapshot.docs.forEach(doc => {
-                //console.log(id + ':' + doc.data().comment)
                 counter += 1
                 comments.textContent = counter
             });
-        })
-       
-        //console.log(doc.data().comment)
+        })       
     });
 }) 
