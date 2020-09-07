@@ -25,6 +25,7 @@
     box-sizing: border-box;
 }
 .b-thumbnail>img{
+    max-height: 281px;
     width: 100%;
 }
 .b-description{

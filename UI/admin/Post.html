@@ -7,6 +7,10 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link rel="stylesheet" href="../css/admin_index.css">
     <link rel="stylesheet" href="../css/admin_post.css">
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-storage.js"></script>
     <title>Dashbord</title>
 </head>
 <body>
@@ -24,6 +28,8 @@
         <a href="manage_posts.html">Manage Posts</a>
         <a href="add_project.html">Projects</a>
         <a href="manage_projects.html">Manage Projects</a>
+        <a href="add_skills.html">Skills</a>
+        <a href="manage_skills.html">Manage Skills</a>
         <a href="comments.html">Comments</a>
         <a href="newslatter.html">Newslatter</a>
         <a href="contact.html">Contact</a>
@@ -37,17 +43,22 @@
                 <div class="top-title">Post</div>
             </div>
             <div class="post-container">
-                <form action="#" method="POST">
+                <form action="#" method="POST" class="post-form">
                     <p>Title Of The Post</p>
                     <input type="text" name="title" placeholder="Enter Title" class="post-input">
                     <p>Feature Image</p>
-                    <input type="file" name=ft-"images" class="post-input">
+                    <input type="file" name="ft_image" class="post-input ft_image">
                     <p>Post Details</p>
-                    <textarea class="post-input"></textarea>
+                    <textarea class="post-input" name="description"></textarea>
                     <input type="submit" name="post" value="Save & Post" class="post-button">
                 </form>
             </div>
         </div>
+            
+    <script src="../js/config.js"></script>
+    <script src="../js/post.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
+
 </html>
 <script src="../js/admin_index.js"></script>

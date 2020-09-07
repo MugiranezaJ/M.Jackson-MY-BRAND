@@ -8,6 +8,8 @@
     <title>MJackson.</title>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" media="screen" href="UI/css/main.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
     
 </head>
 <body>
@@ -69,7 +71,7 @@
             <div class="software-skills">
                 <p class="skills-titles">Software Development</p>
                 <div class="i-container">
-                    <div class="s-s-item skills-item">
+                    <!--<div class="s-s-item skills-item">
                         <div class="s-s-image"><img src="UI/images/skills/html-tutorial.png" alt=""></div>
                         <di class="s-s-name">HTML</di>
                     </div>
@@ -100,13 +102,13 @@
                     <div class="s-s-item skills-item">
                         <div class="s-s-image"><img src="UI/images/skills/mongodb.png" alt=""></div>
                         <di class="s-s-name">MongoDB</di>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="graphics-skills">
                 <p class="skills-titles">Graphics Design</p>
                 <div class="s-skill-set">
-                    <div class="s-g-item skills-item">
+                    <!--<div class="s-g-item skills-item">
                         <div class="s-g-image"><img src="UI/images/skills/adobe after effect.jpg" alt=""></div>
                         <di class="s-g-name">After Effect</di>
                     </div>
@@ -121,7 +123,7 @@
                     <div class="s-g-item skills-item">
                         <div class="s-g-image"><img src="UI/images/skills/unity3d.jpg" alt=""></div>
                         <di class="s-g-name">Unity</di>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -129,7 +131,7 @@
     <div class="l-container projects-c" id="projects">
         <div class="l-title"><p>My Projects</p></div>
         <div class="projects-card">
-            <div class="p-item">
+            <!--<div class="p-item">
                 <div class="p-i-upper">
                     <img src="UI/images/projects/cart.png" alt="shopping cart">
                 </div>
@@ -154,7 +156,7 @@
                         <li>Type: Portfolio</li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
         </div>
         <button class="button-1 hire-button">Hire Me</button>
     </div>
@@ -163,8 +165,8 @@
         <div class="l-title n-t-border"><p class="newslatter-t">Newslatter</p></div>
         <div class="n-form-container">
             <p>Subscribe to our newslatter for late news</p>
-            <form method="POST" action="#">
-                <input type="text" name="newslatter" class="n-input" placeholder="Your email"><button class="n-button">Sign up</button>
+            <form method="POST" class="newslatter-form">
+                <input type="email" name="newslatter" class="n-input" placeholder="Your email"><button type="submit" class="n-button">Sign up</button>
             </form>
         </div>
     </div>
@@ -172,10 +174,10 @@
         <div class="l-title contact-t"><p>Contact</p></div>
         <div class="contact-card">
             <div class="contact-form">
-                <form action="#">
+                <form action="#" class="contact">
                     <input type="text" name="name" class="c-form-input" placeholder="Your Name">
                     <input type="text" name="email" class="c-form-input" placeholder="Your Email">
-                    <textarea class="c-form-input" placeholder="Your Message"></textarea>
+                    <textarea name="message" class="c-form-input" placeholder="Your Message"></textarea>
                     <input type="submit" name="submit" value="Send" class="c-form-input c-button">
                 </form>
             </div>
@@ -204,5 +206,24 @@
         <p>&copy;2020 mjackson.com</p>
     </div>
 </body>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyArQ4Y-CvsXYyKoA4FWkyvHmjtqrwWX-Es",
+        authDomain: "mjackson-my-brand.firebaseapp.com",
+        databaseURL: "https://mjackson-my-brand.firebaseio.com",
+        projectId: "mjackson-my-brand",
+        storageBucket: "mjackson-my-brand.appspot.com",
+        messagingSenderId: "776224693679",
+        appId: "1:776224693679:web:78c67e2e5f025cafc3e35a"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({timestampsInSnapshots: true});
+</script>
+<script src="UI/js/contact.js"></script>
+<script src="UI/js/landing_skills.js"></script>
+<script src="UI/js/landing_projects.js"></script>
 </html>
 <script src="UI/js/main.js"></script>
