@@ -107,7 +107,7 @@ p{
     width: 50%;
     height: 100%;
     float: left;
-    background-color: tomato;
+    /*background-color: tomato;*/
 }
 .img-container> img{
     height: 100%;
@@ -349,6 +349,7 @@ p{
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     border-style: none;
+    color: #fff;
     background-color: #272728;
 }
 .n-button{

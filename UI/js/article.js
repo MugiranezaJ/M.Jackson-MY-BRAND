@@ -14,15 +14,8 @@ function renderBlogCard(doc){
     let aImage = document.createElement('img');
     let aBody = document.createElement('p');
 
-    
-
-    console.log('Id:' + id);
-    //moreB.setAttribute('data-id', doc.id)
     aImage.setAttribute('src', doc.data().Featured_image);
 
-    
-
-    //dateDiv.textContent = doc.data().postDate;
     title.textContent = doc.data().Title;
     postDate.textContent = 'Posted: 19.08.2020 16:42';
     photCortesy.textContent = 'Photo Cortesy:';
@@ -55,7 +48,7 @@ function renderComments(doc){
     comment.setAttribute('class', 'comment');
     cDate.setAttribute('class', 'user-comment-date');
     // text content section
-    console.log(doc.data().name)
+
     var options = { year: 'numeric', month: 'short', day: 'numeric', hour12: false };
     userNameB.textContent = doc.data().name;
     cDate.textContent = doc.data().commentDate.toDate().toLocaleTimeString("en-US", options);
@@ -73,12 +66,9 @@ function renderComments(doc){
 }
 
 // getting article data
-console.log('Database section')
+
 db.collection('blogs').doc(id).get().then((snapshot) => {
-    //snapshot.docs.forEach(doc => {
-        //console.log('Id:' + doc.id);
         renderBlogCard(snapshot);
-    //});
 })
 
 //getting article comments
@@ -101,14 +91,10 @@ commentForm.addEventListener('submit', (e) => {
     commentForm.comment.value = '';
 })
 
-var dataS = {
-    name:'Yego',
-    location:'Kigarama',
-    comments:{
-        user:{
-            name:'Jacks',
-            email:'j@gmail.com',
-            comment:'Cool kbs'
-        }
-    }
-}
+// real time data
+db.collection('blogs').doc(id).collection('comments').onSnapshot((snapshot) =>{
+    let changes = snapshot.docChanges()
+    changes.forEach(change =>{
+        renderComments(change.doc)
+    })
+})

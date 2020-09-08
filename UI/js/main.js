@@ -1,5 +1,4 @@
 var menu2 = document.getElementById("dropdown").addEventListener("blur", OnFocusLose, true);
-//menu.display = none;
 function showMenu() {
     var menu = document.getElementById("dropdown").style;
     if (menu.display == 'block') {

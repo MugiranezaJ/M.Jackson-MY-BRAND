@@ -1,5 +1,7 @@
 const contactForm = document.querySelector('.contact');
 const newslatter = document.querySelector('.newslatter-form');
+const sendButton = document.querySelector('.c-button')
+const signUpButton = document.querySelector('.signup')
 
 // Contact form section
 contactForm.addEventListener('submit', (e) =>{
@@ -18,7 +20,10 @@ contactForm.addEventListener('submit', (e) =>{
     contactForm.name.value = '';
     contactForm.email.value = '';
     contactForm.message.value = '';
-    window.alert('Sent Successfully');
+    sendButton.value = 'Sent Successfully'
+    setTimeout(function(){sendButton.value = 'Send'}, 4000)
+    
+    
 })
 
 // Newslatter section
@@ -32,5 +37,6 @@ newslatter.addEventListener('submit', (e) =>{
         RequestDate: new Date()
     });
     newslatter.newslatter.value = '';
-    window.alert('NewsLatter Requested Successfully');
+    signUpButton.textContent = 'Signed up'
+    setTimeout(function(){signUpButton.textContent = 'sign up'}, 4000)
 })

@@ -174,7 +174,7 @@ body{
 
 @media only screen and (max-width: 824px){
     .closebtn{
-        display: block;
+        display: block !important;
     }
     #sidenav{
         width: 0;

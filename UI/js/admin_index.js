@@ -14,7 +14,7 @@ function listenWidthChanges() {
    if(!mq.matches){
      document.getElementById("sidenav").style.width = "270px";
      document.body.style.backgroundColor = "white";
-   }//else{}
+   }
 }
-
+listenWidthChanges()
 mq.addListener(listenWidthChanges)

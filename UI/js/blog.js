@@ -1,5 +1,4 @@
 const blogCard = document.querySelector('.blog-card');
-//const form = document.querySelector('.add-cafe-form');
 
 function renderBlogCard(doc){
     let blogCardItem = document.createElement('div');
@@ -21,7 +20,6 @@ function renderBlogCard(doc){
     moreB.setAttribute('href', 'article.html?id=' + doc.id)
     moreB.setAttribute('data-id', doc.id)
 
-    //dateDiv.textContent = doc.data().postDate;
     bTitle.textContent = doc.data().Title;
     desc.textContent = doc.data().Description;
     moreB.textContent = 'More...';
@@ -45,15 +43,3 @@ db.collection('blogs').get().then((snapshot) => {
         renderBlogCard(doc);
     });
 })
-
-var dataS = {
-    name:'Yego',
-    location:'Kigarama',
-    comments:{
-        user:{
-            name:'Jacks',
-            email:'j@gmail.com',
-            comment:'Cool kbs'
-        }
-    }
-}
