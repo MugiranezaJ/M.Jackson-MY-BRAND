@@ -86,7 +86,7 @@ commentForm.addEventListener('submit', (e) => {
                 commentDate: new Date(),
                 comment:commentForm.comment.value
     });
-    commentForm.name.value = '';
+    commentForm.name.value = ' ';
     commentForm.email.value = '';
     commentForm.comment.value = '';
 })
